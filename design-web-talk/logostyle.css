@@ -1,0 +1,83 @@
+body {
+  background: chocolate;
+}
+
+.container,
+.box,
+.circle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  background: linear-gradient(-90deg, #000000, #1c1b1b, #131313, #1C1C1C, #1C1C1C, #090909, #000000);
+  border-radius: 40px;
+  box-shadow: 
+  0px 0px 5px 5px rgba(0, 0, 0, .3),
+  inset 0px 1px 1px 1px rgba(255, 255, 255, .5);
+  height: 500px;
+  width: 500px;
+}
+
+.circle {
+  background: 
+    linear-gradient(90deg, #2b2a2a, #cdcccc, #737171, #fefefe, #cdcccc, #fefefe, #2b2a2a),
+    linear-gradient(90deg, #cdcccc, transparent),
+    linear-gradient(90deg, #737171, transparent),
+    linear-gradient(90deg, #fefefe, transparent),
+    linear-gradient(90deg, #cdcccc, transparent),
+    linear-gradient(90deg, #fefefe, transparent),
+    linear-gradient(90deg, #2b2a2a, transparent);
+  border-radius: 50%;
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, .3);
+  height: 350px;
+  width: 350px;
+}
+
+.circle::before {
+  background: #2F1A19;
+  border: 12px solid rgba(196, 196, 196, .4);
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 2px 15px rgba(0, 0, 0, .6);
+  content: '';
+  height: 250px;
+  position: absolute;
+  width: 250px;
+}
+
+.triangle {
+  font-size: 130px;
+  position: absolute;
+}
+
+.triangle-icon {
+  background: linear-gradient(90deg, #eee, #333);
+  background-clip: text;
+  margin-left: 20px;
+  position: absolute;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.triangle::after {
+  color: transparent;
+  margin-left: 20px;
+  text-shadow: 
+    0px 1px 0px #999,
+    0px 2px 0px #888,
+    0px 3px 0px #777,
+    0px 4px 0px #666,
+    0px 5px 0px #555,
+    0px 6px 0px #444,
+    0px 7px 0px #333,
+    0px 8px 7px #001135;
+}
+
+.triangle::after {
+  content: '▶';
+}
